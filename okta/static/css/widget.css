@@ -1,0 +1,68 @@
+html{
+    background-color:rgb(66, 146, 244)
+  }
+  
+  #widget-container .auth-container.main-container{
+    background-color:rgba(0, 0, 0, 0);
+    border-color: rgb(66, 146, 244, 0) !important;
+    box-shadow: 0 2px 0 rgba(175, 175, 15, 0);
+    color:white;
+  }
+  
+  #widget-container .auth-container.main-container .auth-header{
+    border-bottom-color:rgb(66, 146, 244) !important;
+  }
+  
+  #widget-container .auth-content .okta-form-title{
+    color:white;
+  }
+  
+  #widget-container .o-form-fieldset-container .o-form-input-name-username{
+    border:1px solid rgb(66, 146, 244);
+    background: white;
+  }
+  
+  #widget-container .o-form-fieldset-container .o-form-input-name-username input{
+    color:black;
+  }
+  
+  #widget-container .o-form-fieldset-container .o-form-input-name-password{
+    border:1px solid rgb(66, 146, 244);
+    background:white;
+  }
+  
+  #widget-container .o-form-fieldset-container .o-form-input-name-password input{
+    color:black;
+  }
+  
+  #widget-container .auth-content .o-form-button-bar .button{
+    color:white !important;
+    background:linear-gradient(rgb(66, 146, 244),rgb(66, 146, 244)) !important;
+    border-color:white !important;
+  }
+  
+  #widget-container .auth-content .auth-footer .link {
+    color:white;
+  }
+  
+  #widget-container .auth-content .forgot-password .button{
+    color:white !important;
+    background:linear-gradient(rgb(66, 146, 244),rgb(66, 146, 244)) !important;
+    border-color:white !important;
+  }
+  
+  #widget-container .okta-form-subtitle{
+    color:white !important;
+  }
+  
+  #widget-container .o-form-error-container{
+    color:red !important;
+  }
+  
+  #widget-container .okta-form-input-error{
+    color:white !important;
+  }
+  
+  #widget-container .okta-form-label label{
+    color:white !important;
+  }

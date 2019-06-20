@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:url" content="https://okta.adrian-lazar.com">
+        <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.20.0/js/okta-sign-in.min.js"type="text/javascript"></script>
+        <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.20.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet"/>
+        <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.20.0/css/okta-theme.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/widget.css">
+        {% if title %}
+            <title>{{title}}</title>
+        {% else %}
+            <title>Work in Progress</title>
+        {% endif %}
+        <style>
+            .header-container{
+                width:99vw;
+                height:6vh;
+                background-color:rgb(66, 146, 244);
+            }
+            .header-list{
+                list-style-type:none;
+                margin:0;
+                padding:0;
+                overflow: hidden;
+            }
+            .header-list li{
+                float:left;
+            }
+            .header-list li a{
+                color: white;
+                text-align:center;
+                text-decoration: none;
+                display:block;
+                padding:20px 16px;
+            }
+            .header-list li a:hover{
+                background-color:white;
+                color:rgb(66, 146, 244);
+            }
+            .header-list li a:active{
+                background-color: rgb(66, 146, 244);
+                color:rgb(66, 146, 244);
+            }
+
+            .active {
+                background-color:white;
+                color:rgb(66, 146, 244)!important;
+            }
+        </style>    
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <ul class="header-list" id="header-list">
+                    <li><a id="home" href="/">Home</li></a>
+                    <li><a id="siw" href="/siw">Sign In Widget</a></li>
+                    <li><a id="oauth2-pkce" href="/oauth2/auth-code-pkce">OIDC - Authcode with PKCE</li></a>
+                </ul>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+        <script>
+            var path = window.location.pathname
+            switch(path){
+                case "/":
+                    var el = document.getElementById("home").classList.add("active");
+                    break;
+                case "/siw":
+                    var el = document.getElementById("siw").classList.add("active");
+                    break;
+                case "/oauth2/auth-code-pkce":
+                    var el = document.getElementById("oauth2-pkce").classList.add("active");
+                    break;
+            }
+            
+        </script>
+    </body>
