@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+        <div id="main-container" class="main-container">
+            <div id="widget-container"></div>
+            <div id="data">
+                <p><code id="accessToken"></code></p>
+                <div></div>
+                <p><code id="idToken"></code></p>
+                <p><code id="idTokenPayload"></code></p>
+            </div>
+            <div id="token-functions">
+                <div id="revoke"></div>
+                <div id="introspect"></div>
+            </div>
+            <div id="logout"></div>
+        </div>
+        <script src="/static/js/oauth2/auth-code-pkce/auth_code.js"></script>
+        <script src="/static/js/oauth2/ops/token_ops.js"></script>
+{% endblock content %}
